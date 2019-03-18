@@ -1,6 +1,6 @@
 import { RenderImages} from './RenderImages'
 import { getUnsplashSearchUrl } from '../helpers/getUnsplashUrl'
-import { Fetcher } from './Fetcher'
+import { Fetcher } from '../helpers/Fetcher'
 
 export class Search {
     constructor(options) {

@@ -4,8 +4,7 @@
   "description": "web-app-from-scratch",
   "main": "app.js",
   "scripts": {
-    "start": "parcel client/public/index.html",
-    "build": "parcel build client/public/index.html"
+    "start": "nodemon ./server/js/index.js"
   },
   "repository": {
     "type": "git",
@@ -15,11 +14,14 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.18.3",
     "dotenv": "^6.2.0",
-    "navigo": "^7.1.2"
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "helmet": "^3.16.0",
+    "node-fetch": "^2.3.0"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.11.0"
+    "nodemon": "^1.18.10"
   }
 }

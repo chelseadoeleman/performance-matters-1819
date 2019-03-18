@@ -1,5 +1,5 @@
 import { times } from '../helpers/helpers'
-import { Fetcher } from './Fetcher'
+import { Fetcher } from '../helpers/Fetcher'
 import { getUnsplashUrl} from '../helpers/getUnsplashUrl'
 import { Loader } from './Loader'
 import { Search } from './Search'
