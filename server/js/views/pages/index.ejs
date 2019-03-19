@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' type='text/css' />
     <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.0/mapbox-gl-geocoder.css' type='text/css' />
     <% include ../components/head %>
 </head>
@@ -14,8 +14,12 @@
             <div class="photos">
                 <% images.forEach(function(image) { %>
                     <div class="image-wrapper">
-                        <img src="<%= image.urls && image.urls.regular %>" alt="image">
-                        <a href="<%= image.id %>"></a>
+                        <img 
+                            class="image" 
+                            src="<%= image.urls && image.urls.regular %>" 
+                            data-location="<%= image.user && image.user.location %>"
+                            alt="image">
+                        <a href="/detail/<%= image.id %>">More about this picture</a>
                     </div>
                 <% }) %>
             </div>

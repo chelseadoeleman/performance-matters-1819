@@ -4,9 +4,22 @@ const geoCoder = new MapboxGeocoder({
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibWVsa2JvZXIiLCJhIjoiY2pydDZnemZrMGk2NTQ0bnB5N2FzYnY4ZSJ9.6Rz3rv9QYard69Bd1_onig'
 
-new mapboxgl.Map({
+const mapBox = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/dark-v9',
     zoom: 1,
     center: [4.895168, 52.370216]
+})
+
+mapBox.addControl(geoCoder)
+
+const images = [...document.querySelectorAll('.image')]
+
+images.map(image => {
+    image.addEventListener('click', (event) =>  {
+        const location = event.target.getAttribute('data-location')
+        location === undefined
+            ? alert('Location Unknown')
+            : geoCoder.query(location)
+    })
 })
