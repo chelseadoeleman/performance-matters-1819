@@ -1,6 +1,6 @@
 const fetch = require('node-fetch')
 
-moduel.exports = class Fetcher {
+module.exports = class Fetcher {
     constructor(options) {
         this.options = options
     }

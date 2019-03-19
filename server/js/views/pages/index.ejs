@@ -11,7 +11,14 @@
             Web App From Scratch
         </h1>
         <section>
-            <div class="photos"></div>
+            <div class="photos">
+                <% images.forEach(function(image) { %>
+                    <div class="image-wrapper">
+                        <img src="<%= image.urls && image.urls.regular %>" alt="image">
+                        <a href="<%= image.id %>"></a>
+                    </div>
+                <% }) %>
+            </div>
             <div id="map" style="min-width: 40vw; max-height: 90vh; margin-top: 2em; margin-right: 2em; position: relative;"></div>
         </section>
     </main>
