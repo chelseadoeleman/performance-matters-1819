@@ -11,12 +11,6 @@
     box-sizing: inherit;
 }
 
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-
-
 img {
     display: block;
 }
@@ -42,6 +36,10 @@ html {
 html, body {
     min-height: 100vh;
     padding: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 body {
