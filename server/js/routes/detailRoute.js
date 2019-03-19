@@ -1,23 +1,14 @@
-import { DetailView } from '../components/DetailView' 
-import { Loader } from '../components/Loader'
+const { getUnsplashDetail } = require('../helpers/getUnsplashUrl')
+const Fetcher = require('../helpers/Fetcher')
 
-export const handleDetailRoute = (parent, router) => {
-    return ({ id }) => {
-        parent.innerHTML = ''
+module.exports = async (request, response) => {
+    const { id } = request.params
+    const url = getUnsplashDetail(id)
+    const details = await new Fetcher({ url, options: {headers: {'X-Ratelimit-Limit': '1000'}} }).fetch()
 
-        const sectionElement = document.createElement('section')
-        const headingElement = document.createElement('h1')
-        
-        headingElement.innerText = 'Web App From Scratch'
-        headingElement.addEventListener('click', () => {
-            router.navigate('/')
-        })
+    console.log(details)
 
-        Loader.toggleLoader()
-
-        new DetailView({ parent: sectionElement, router, id })
-
-        parent.appendChild(headingElement)
-        parent.appendChild(sectionElement)
-    }
+    response.status(200).render('pages/detail', {
+        details
+    })
 }
