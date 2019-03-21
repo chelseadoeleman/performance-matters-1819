@@ -82,14 +82,6 @@ The Application also has a search function, to get the images you would like to 
 **Resources**
 * [Express](https://parceljs.org/)
 * [Node](https://babeljs.io/docs/en/babel-polyfill)
-* [Navigo](https://github.com/krasimir/navigo)
-* [Classes](https://developer.mozilla.org/nl/docs/Web/JavaScript/Reference/Klasses)
-* [Times function to start counting from 1 in an array](https://stackoverflow.com/questions/3746725/create-a-javascript-array-containing-1-n)
-
-## Credits
-
-*   **Maikel:** For helping with Classes and setting up the router.
-*   **Tim:** For helping with the header, to be able to send more requests.
 
 ## Checklist
 - [x] Find an API of your interest
