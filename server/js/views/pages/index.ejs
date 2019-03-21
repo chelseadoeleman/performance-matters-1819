@@ -17,11 +17,11 @@
                     <div class="image-wrapper">
                         <img 
                             class="image"
-                            srcset="<%= image.urls && image.urls.thumb %> 200w, <%= image.urls && image.urls.small %> 400w, <%= image.urls && image.urls.regular %> 1080w"
+                            srcset="https://cors-anywhere.herokuapp.com/<%= image.urls && image.urls.thumb %> 200w, https://cors-anywhere.herokuapp.com/<%= image.urls && image.urls.small %> 400w, https://cors-anywhere.herokuapp.com/<%= image.urls && image.urls.regular %> 1080w"
                             sizes="(max-width: 480px) 200px,
                                 (min-width: 480px and max-width: 600px) 400px,
                                 1080px"
-                            src="<%= image.urls && image.urls.regular %>" 
+                            src="https://cors-anywhere.herokuapp.com/<%= image.urls && image.urls.regular %>" 
                             data-location="<%= image.user && image.user.location %>"
                             style="background-color: <%= image.color %>;"
                             alt="image">
