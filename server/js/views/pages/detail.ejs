@@ -13,11 +13,11 @@
                     <li class="detail-image-wrapper">
                         <img 
                             class="head-image" 
-                            srcset="https://cors-anywhere.herokuapp.com/<%= details.urls && details.urls.thumb %> 200w, https://cors-anywhere.herokuapp.com/<%= details.urls && details.urls.small %> 400w, https://cors-anywhere.herokuapp.com/<%= details.urls && details.urls.regular %> 1080w"
+                            srcset="<%= details.urls && details.urls.thumb %> 200w, <%= details.urls && details.urls.small %> 400w, <%= details.urls && details.urls.regular %> 1080w"
                             sizes="(max-width: 480px) 200px,
                                 (min-width: 480px and max-width: 600px) 400px,
                                 1080px"
-                            src="https://cors-anywhere.herokuapp.com/<%= details.urls.regular %>"
+                            src="<%= details.urls.regular %>"
                             style="background-color: <%= image.color %>;"
                             alt="image"
                         >
