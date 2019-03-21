@@ -6,13 +6,13 @@
 
 
 ## Table of Contents
-* [How to install](#how-to-install) 
-* [Walktrough the application](#walk-trough-the-application) 
-* [Performance features](#performance-features)
-* [Resources](#resources)
-* [Credits](#credits)
-* [Checklist](#checklist)
-* [License](#license)
+* **[How to install](#how-to-install)** 
+* **[Walktrough the application](#walk-trough-the-application)** 
+* **[Performance features](#performance-features)**
+* **[Resources](#resources)**
+* **[Credits](#credits)**
+* **[Checklist](#checklist)**
+* **[License](#license)**
 
 ## How to install
 
