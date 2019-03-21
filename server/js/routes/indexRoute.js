@@ -6,7 +6,6 @@ module.exports = async (request, response) => {
     const images = await Promise.all(times(10).map(async (pageNumber) => {
         const url = getUnsplashUrl(pageNumber)
         const results = await new Fetcher({ url, options: {headers: {'X-Ratelimit-Limit': '1000'}} }).fetch()
-
         return results
     }))
 

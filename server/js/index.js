@@ -19,3 +19,5 @@ app.get('/detail/:id', handleDetailRoute)
 app.listen({ port: process.env.PORT || 3000 }), () => {
     console.log(`listening on port ${process.env.PORT || 3000}`)
 }
+
+// app.use(shrinkRay({cache: () => false,cacheSize: false,filter: () => true,brotli: {quality: 4 // between 1 and 11},zlib: {level: 6 // between 1 and 9}}))

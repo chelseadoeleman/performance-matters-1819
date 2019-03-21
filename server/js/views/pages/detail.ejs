@@ -13,7 +13,12 @@
                     <li class="detail-image-wrapper">
                         <img 
                             class="head-image" 
-                            src="<%= details.urls.regular %>" 
+                            srcset="<%= details.urls && details.urls.thumb %> 200w, <%= details.urls && details.urls.small %> 400w, <%= details.urls && details.urls.regular %> 1080w"
+                            sizes="(max-width: 480px) 200px,
+                                (min-width: 480px and max-width: 600px) 400px,
+                                1080px"
+                            src="<%= details.urls.regular %>"
+                            style="background-color: <%= image.color %>;"
                             alt="image"
                         >
                     </li>

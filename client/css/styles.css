@@ -59,11 +59,12 @@ main {
     flex-direction: column;
     display: flex;
     flex: 1;
+    margin-bottom: 2em;
 }
 
 h1 {
-    margin: 1em;
-    margin-right: -1em;
+    margin: 1em .5em -1em 1em;
+    margin-bottom: .5em;
 }
 
 .error-wrapper {
@@ -99,15 +100,16 @@ h2 {
 
 section {
     display: flex;
-    margin-left: 15vw;
+    margin: 0 auto;
     flex: 1 0;
 }
 
 .image-wrapper {
+    margin-top: 3em;
     display: flex;
     flex-direction: column;
     min-width: 35vw;
-    min-height: 100vh;
+    max-height: 75vh;
     justify-content: center;
     align-items: center;
 }
@@ -117,20 +119,22 @@ section {
     overflow: auto;
     overflow-y: hidden;
     max-height: 95vh;
-    width: 40vw;
+    width: 53vw;
     margin: 0 2em;
 }
 
 img {
-    object-fit: fill;
+    object-fit: cover;
     margin: 0 -2em;
     margin-bottom: 2em;
     justify-content: center;
     flex-direction: row;
-    width: 80%;
+    display: block;
     flex-shrink: 0;
     z-index: 2;
     cursor: pointer;
+    width: 100%;
+    height: 100%;
 }
 
 a {
@@ -139,12 +143,13 @@ a {
 }
 
 .searchBox {
+    padding: .5em;
     position: absolute;
     z-index: 5;
-    min-width: 12%;
+    min-width: 40%;
     height: 3.5em;
-    top: 15%;
-    left: 2%;
+    top: 5%;
+    right: 2%;
 }
 
 section ul {
