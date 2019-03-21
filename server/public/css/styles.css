@@ -46,7 +46,7 @@ body {
     overflow-x: hidden;
     display: flex;
     line-height: 1;
-    font-family: "didot";
+    font-family: "didot", Georgia, Times, 'Times New Roman', serif;
     color: #2b2b2b;
     background-color: #F2F2F2;
     -webkit-font-smoothing: antialiased;
