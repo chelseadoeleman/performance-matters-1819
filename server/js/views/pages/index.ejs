@@ -8,7 +8,7 @@
 <body>
     <main>
         <h1>
-            Web App From Scratch
+            Unsplash slider
         </h1>
         <input type="text" class="searchBox" placeholder="What are you looking for?"/>
         <section>
@@ -25,7 +25,7 @@
                             data-location="<%= image.user && image.user.location %>"
                             style="background-color: <%= image.color %>;"
                             alt="image">
-                        <a href="/detail/<%= image.id %>">More about this picture</a>
+                        <a class="link" href="/detail/<%= image.id %>">More about this picture</a>
                     </div>
                 <% }) %>
             </div>
