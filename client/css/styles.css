@@ -1,7 +1,7 @@
 @font-face {
-    font-family: "didot";
+    font-family: "prata-regular";
     font-display: swap;
-    src: url("../fonts/Didot.ttc") format("opentype")
+    src: url("../fonts/Prata-Regular.woff2") format("woff2")
 }
 
 * {
@@ -42,8 +42,9 @@ html, body {
 body {
     overflow-x: hidden;
     display: flex;
-    line-height: 1;
-    font-family: "didot";
+    font-family: "prata-regular", Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    line-height: 1.6;
     color: #2b2b2b;
     background-color: #F2F2F2;
 }
@@ -83,7 +84,7 @@ section {
     display: flex;
     flex-direction: column;
     min-width: 35vw;
-    max-height: 74vh;
+    max-height: 71vh;
     justify-content: center;
     align-items: center;
 }
@@ -100,7 +101,7 @@ section {
 img {
     object-fit: cover;
     margin: 0 -2em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     justify-content: center;
     flex-direction: row;
     display: block;

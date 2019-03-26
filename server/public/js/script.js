@@ -7,6 +7,13 @@ const getUnsplashSearchUrl = (search) => {
 
 const searchBox = document.querySelector('.searchBox')
 const photos = document.querySelector('.photos')
+const font = new FontFaceObserver('prata-regular');
+const body = document.querySelector('body');
+
+font.load().then(() => {
+    body.className += ' font-loaded'
+    setCookie('font-loaded')
+})
 
 class Fetcher {
     constructor(options) {

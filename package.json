@@ -33,6 +33,7 @@
     "@babel/plugin-transform-regenerator": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
     "concurrently": "^4.1.0",
+    "fontfaceobserver": "^2.1.0",
     "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-brotli": "^1.2.1",
