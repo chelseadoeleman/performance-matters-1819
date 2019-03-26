@@ -1,10 +1,5 @@
 const images = [...document.querySelectorAll('.image')]
 
-// images.map(image => {
-//     const color = image.getAttribute('data-color')
-//     // image.style.setProperty('background-color', color)
-// })
-
 const geoCoder = new MapboxGeocoder({ 
     accessToken: 'pk.eyJ1IjoibWVsa2JvZXIiLCJhIjoiY2pydDZnemZrMGk2NTQ0bnB5N2FzYnY4ZSJ9.6Rz3rv9QYard69Bd1_onig'
 })

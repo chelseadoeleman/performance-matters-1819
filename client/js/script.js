@@ -1,3 +1,15 @@
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope)
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err)
+        })
+    })
+}
+
 const getUnsplashSearchUrl = (search) => {
     const baseUrl = `https://api.unsplash.com/search/photos/?client_id=`
     const unsplash = 'd633cd88d3ab4d70df0bfa48b64ee1241d0d56f25c16a78e451f20172dbda585'
