@@ -1,8 +1,8 @@
 {
-  "name": "web-app-from-scratch-18-19",
+  "name": "performance-matters-1819",
   "version": "1.0.0",
-  "description": "web-app-from-scratch",
-  "main": "app.js",
+  "description": "performance-matters",
+  "main": "index.js",
   "scripts": {
     "build": "npm run minify",
     "start": "node ./server/js/index.js",
