@@ -6,8 +6,6 @@ module.exports = async (request, response) => {
     const url = getUnsplashDetail(id)
     const details = await new Fetcher({ url, options: {headers: {'X-Ratelimit-Limit': '1000'}} }).fetch()
 
-    console.log(details)
-
     response.status(200).render('pages/detail', {
         details
     })
