@@ -37,7 +37,6 @@ self.addEventListener('fetch', event => {
         )
     ) {
         event.respondWith(fetch(event.request.url)
-        // DEMO CODE
             .then(response => {
                 return caches.open('html-cache').then(cache => {
                     return cache.put(event.request.url, response.clone()).then(() => {
@@ -48,20 +47,17 @@ self.addEventListener('fetch', event => {
             .catch(error => {
                 return caches.open('html-cache').then(cache => {
                     return cache.match(event.request.url).then(response => {
-                        console.log(response)
                         return response 
-                        ? response
-                        : cache.open('core-cache').then(cache => {
-                            return cache.match('/offlinePage.html').then(response => {
-                                return response
+                            ? response
+                            : caches.open('core-cache').then(cache => {
+                                return cache.match('/offlinePage.html').then(response => {
+                                    return response
+                                })
                             })
-                        })
                     })
                 })
-                // return caches.match('/offlinePage.html')
             })
         )
-        // END OF DEMO
     } else {
         event.respondWith(
             caches
