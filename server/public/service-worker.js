@@ -36,9 +36,33 @@ self.addEventListener('fetch', event => {
             && event.request.headers.get('accept').includes('text/html')
         )
     ) {
-        event.respondWith(fetch(event.request.url).catch(error => caches.match('/offlinePage.html')))
-    }
-    else {
+        event.respondWith(fetch(event.request.url)
+        // DEMO CODE
+            .then(response => {
+                return caches.open('html-cache').then(cache => {
+                    return cache.put(event.request.url, response.clone()).then(() => {
+                        return response
+                    })
+                })
+            })
+            .catch(error => {
+                return caches.open('html-cache').then(cache => {
+                    return cache.match(event.request.url).then(response => {
+                        console.log(response)
+                        return response 
+                        ? response
+                        : cache.open('core-cache').then(cache => {
+                            return cache.match('/offlinePage.html').then(response => {
+                                return response
+                            })
+                        })
+                    })
+                })
+                // return caches.match('/offlinePage.html')
+            })
+        )
+        // END OF DEMO
+    } else {
         event.respondWith(
             caches
             .match(event.request)
