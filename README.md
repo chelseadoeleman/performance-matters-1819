@@ -11,6 +11,8 @@
 * **[How to install](#how-to-install)** 
 * **[Walktrough the application](#walk-trough-the-application)** 
 * **[Performance features](#performance-features)**
+* **[Service worker](#service-worker)**
+* **[Learning process](#learning-process)**
 * **[Resources](#resources)**
 * **[Credits](#credits)**
 * **[Checklist](#checklist)**
